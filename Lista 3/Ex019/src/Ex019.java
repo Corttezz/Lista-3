@@ -15,17 +15,16 @@ public class Ex019 {
             for(int i = 0; i < numeros; i++){
                 System.out.println("Digite o "+(i+1)+"° número:");
                 conjunto[i] = tc.nextInt();
-                if(conjunto[i] >= 0 && conjunto[i] <= 1000){
 
-                maior = conjunto[i];
-                menor = conjunto[i];
-
-                
-                }else{
+                while(conjunto[i] < 0 || conjunto[i] > 1000){
                     System.out.println("Número inválido.");
                     System.out.println("Digite o "+(i+1)+"° número novamente:");
                     conjunto[i] = tc.nextInt();
                 }
+
+                maior = conjunto[i];
+                menor = conjunto[i];
+
             }
         }
         for(int i = 0; i<numeros; i++){
